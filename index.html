@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- MDUI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"
+    />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="mdui-toolbar mdui-color-theme">
+      <span class="mdui-typo-title">The YAN site</span>
+      <div class="mdui-toolbar-spacer"></div>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+        <i class="mdui-icon material-icons" onclick="window.open('https://github.com/SinoAHpx/YAN');">info_outline</i>
+      </a>
+    </div>
+    <div class="mdui-container">
+      <div class="mdui-row-xs-3">
+        <div class="mdui-col">
+          <div class="mdui-card">
+            <div class="mdui-card-primary-title" style="margin:10;">
+              简体之YAN
+            </div>
+            <div class="mdui-card-primary-subtitle">E863，其不可显</div>
+            <div class="mdui-card-actions">
+              <button class="mdui-btn mdui-ripple" onclick="copy('')">复制</button>
+            </div>
+          </div>
+        </div>
+        <div class="mdui-col">
+          <div class="mdui-card">
+            <div class="mdui-card-primary-title">
+              简体之YAN
+            </div>
+            <div class="mdui-card-primary-subtitle">4ADE，其可显</div>
+            <div class="mdui-card-actions">
+              <button class="mdui-btn mdui-ripple" onclick="copy('䶮')">复制</button>
+            </div>
+          </div>
+        </div>
+        <div class="mdui-col">
+          <div class="mdui-card">
+            <div class="mdui-card-primary-title">
+              繁体之YAN
+            </div>
+            <div class="mdui-card-primary-subtitle">9F91，此字无异</div>
+            <div class="mdui-card-actions">
+              <button class="mdui-btn mdui-ripple" onclick="copy('龑')">复制</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MDUI JavaScript -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script>
+        function copy(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                mdui.snackbar({
+                    message: 'Copied ' + text,
+                    timeout: 2000
+                });
+            });
+        }
+    </script>
+  </body>
+</html>
